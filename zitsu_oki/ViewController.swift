@@ -21,8 +21,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // ボタンとを押すと実行する動作
+    // 起きたボタンを押すと実行する動作
     @IBAction func wakeupBotton(_ sender: UIButton) {
-        print("bbb")
+        //現在の日付を取得
+        let date:Date = Date()
+                
+        //日付のフォーマットを指定する。
+        let format = DateFormatter()
+        format.dateFormat = "yyyy/MM/dd HH:mm:ss"
+                
+        //日付をStringに変換する
+        let sDate = format.string(from: date)
+                
+        print(sDate)
+    }
+    
+    @IBAction func wakeupPlanBotton(_ sender: UIButton) {
+        print("aaa")
     }
 }
