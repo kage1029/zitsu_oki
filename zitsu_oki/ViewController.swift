@@ -36,7 +36,18 @@ class ViewController: UIViewController {
         print(sDate)
     }
     
+    
+    // ここからお明日起きる時間Viewの操作
+    // 起きる時間を入力するテキストフィールド
+    @IBOutlet weak var wakeupPlanTextField: UITextField!
+    
+    // 明日起きる時間を設定ボタンを押すと実行する動作
     @IBAction func wakeupPlanBotton(_ sender: UIButton) {
         print("aaa")
+        let wakeUpPlanTime = Int(self.wakeupPlanTextField.text ?? "")
+        
+        print(wakeUpPlanTime)
     }
+    
+    
 }
