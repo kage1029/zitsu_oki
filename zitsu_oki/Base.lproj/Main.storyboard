@@ -92,6 +92,12 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uus-35-RlV">
+                                <rect key="frame" x="167" y="735" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NDg-d5-oe7"/>
@@ -101,6 +107,7 @@
                         <outlet property="hourLabel" destination="e37-UX-xPP" id="6Xr-hi-wB7"/>
                         <outlet property="minutesLabel" destination="Hra-OO-G09" id="jjl-fH-kyP"/>
                         <outlet property="secondLabel" destination="SuP-w3-FMF" id="59L-ZZ-mYd"/>
+                        <outlet property="wakeupTimeTextField" destination="uus-35-RlV" id="kUK-5h-BAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asd-jd-Qys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="742.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="cVp-lU-TCR">
             <objects>
-                <viewController storyboardIdentifier="wakeupView" id="nfK-Ya-uaJ" customClass="ViewController" customModule="zitsu_oki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wakeupView" id="nfK-Ya-uaJ" customClass="ViewController2" customModule="zitsu_oki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MoH-r0-FZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,13 +173,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e99-lP-WVy">
-                                <rect key="frame" x="210" y="357" width="191" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-oY-q5K">
                                 <rect key="frame" x="124" y="362" width="113" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dim-5l-cae" customClass="Button_Custom" customModule="zitsu_oki">
-                                <rect key="frame" x="53" y="593" width="320" height="80"/>
+                                <rect key="frame" x="46" y="605" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -201,7 +201,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="wakeupPlanBotton:" destination="nfK-Ya-uaJ" eventType="touchUpInside" id="I4e-rF-DJ9"/>
+                                    <action selector="wakeupPlanButton:" destination="nfK-Ya-uaJ" eventType="touchUpInside" id="HWT-tV-2zG"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7N-3O-ws0">
@@ -209,19 +209,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="wakeupPlanText:" destination="nfK-Ya-uaJ" eventType="editingDidEnd" id="wuK-It-MKE"/>
-                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e99-lP-WVy">
+                                <rect key="frame" x="158" y="362" width="297" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9t9-iH-7bb"/>
                     </view>
                     <navigationItem key="navigationItem" id="YWq-HF-Jrt"/>
                     <connections>
-                        <outlet property="hourLabel2" destination="K9R-po-wNK" id="O1K-FB-4bu"/>
-                        <outlet property="minutesLabel2" destination="e99-lP-WVy" id="zUx-ui-8gf"/>
-                        <outlet property="wakeupPlanTextField" destination="U7N-3O-ws0" id="MxJ-fR-Mg3"/>
+                        <outlet property="hourLabel2" destination="K9R-po-wNK" id="TsR-cu-QYb"/>
+                        <outlet property="minutesLabel2" destination="e99-lP-WVy" id="nTL-17-FXn"/>
+                        <outlet property="wakeupPlanTextField" destination="U7N-3O-ws0" id="1fh-GM-4e9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYA-2b-ptY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

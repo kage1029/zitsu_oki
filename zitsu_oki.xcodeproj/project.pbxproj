@@ -16,6 +16,7 @@
 		9E6D5D65242C69BD001E885F /* zitsu_okiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6D5D64242C69BD001E885F /* zitsu_okiTests.swift */; };
 		9E6D5D70242C69BE001E885F /* zitsu_okiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6D5D6F242C69BE001E885F /* zitsu_okiUITests.swift */; };
 		9E7CA7BD242D20FC002BF9DA /* Button_Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CA7BC242D20FC002BF9DA /* Button_Custom.swift */; };
+		9E7CA7BF242E25E1002BF9DA /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7CA7BE242E25E1002BF9DA /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9E6D5D6F242C69BE001E885F /* zitsu_okiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zitsu_okiUITests.swift; sourceTree = "<group>"; };
 		9E6D5D71242C69BE001E885F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7CA7BC242D20FC002BF9DA /* Button_Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_Custom.swift; sourceTree = "<group>"; };
+		9E7CA7BE242E25E1002BF9DA /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9E6D5D58242C69BD001E885F /* LaunchScreen.storyboard */,
 				9E6D5D5B242C69BD001E885F /* Info.plist */,
 				9E7CA7BC242D20FC002BF9DA /* Button_Custom.swift */,
+				9E7CA7BE242E25E1002BF9DA /* ViewController2.swift */,
 			);
 			path = zitsu_oki;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7CA7BF242E25E1002BF9DA /* ViewController2.swift in Sources */,
 				9E7CA7BD242D20FC002BF9DA /* Button_Custom.swift in Sources */,
 				9E6D5D52242C69BC001E885F /* ViewController.swift in Sources */,
 				9E6D5D4E242C69BC001E885F /* AppDelegate.swift in Sources */,
