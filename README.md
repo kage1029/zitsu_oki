@@ -2,4 +2,5 @@
 
 朝弱い人のためのアプリ
 
-now developing...
+ジツオキ紹介スライド
+https://docs.google.com/presentation/d/1hOp_6ZPYjp57Fi-ibL7c66Clnl9_7torobQOLDX1mf4/edit?usp=sharing
