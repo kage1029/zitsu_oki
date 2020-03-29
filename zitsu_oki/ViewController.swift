@@ -18,52 +18,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //現在の日付を取得
-        let date:Date = Date()
-                
-        //日付のフォーマットを指定する。
-        let format = DateFormatter()
-        format.dateFormat = "HH:mm"
-                
-        //日付をStringに変換する
-        let sDate = format.string(from: date)
-        print(sDate)
-        
-        // 入力された時間を取得
-        hourLabel.text = sDate
-        
         
     }
-    
-    @IBOutlet weak var wakedupTime: UILabel!
     
     // 起きたボタンを押すと実行する動作
-    @IBAction func wakeupBotton(_ sender: UIButton) {
-        //現在の日付を取得
-        let date:Date = Date()
-                
-        //日付のフォーマットを指定する。
-        let format = DateFormatter()
-        format.dateFormat = "HH:mm"
-                
-        //日付をStringに変換する
-        let sDate = format.string(from: date)
-        print(sDate)
-        
-        // 入力された時間を取得
-        hourLabel.text = sDate
-        wakedupTime.text = sDate
-        
-    }
     
+
+    @IBOutlet weak var wakedUpTimeTextField: UITextField!
     @IBOutlet weak var wakeupPlanTimeTextField: UITextField!
     
-    @IBOutlet weak var wakeupPlanLabel: UILabel!
     @IBAction func wakeupPlanButton(_ sender: UIButton) {
+        
+        let num1 = Int(self.wakedUpTimeTextField.text ?? "")!
+        let num2 = Int(self.wakeupPlanTimeTextField.text ?? "")!
+        
+        let diff = String(num2 * 2 - num1)
 
-        let wt = "0" + String(wakeupPlanTimeTextField.text ?? "") + ":" + "00"
-                
-        wakeupPlanLabel.text = wt
-                
-    }
+            print(diff)
+
+        let wt = "0" + diff + ":" + "00"
+            
+        hourLabel.text = wt
+           }
 }
