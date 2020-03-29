@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var wakedupTime: UILabel!
+    
     // 起きたボタンを押すと実行する動作
     @IBAction func wakeupBotton(_ sender: UIButton) {
         //現在の日付を取得
@@ -50,7 +52,18 @@ class ViewController: UIViewController {
         
         // 入力された時間を取得
         hourLabel.text = sDate
+        wakedupTime.text = sDate
         
     }
     
+    @IBOutlet weak var wakeupPlanTimeTextField: UITextField!
+    
+    @IBOutlet weak var wakeupPlanLabel: UILabel!
+    @IBAction func wakeupPlanButton(_ sender: UIButton) {
+
+        let wt = "0" + String(wakeupPlanTimeTextField.text ?? "") + ":" + "00"
+                
+        wakeupPlanLabel.text = wt
+                
+    }
 }
